@@ -1,13 +1,75 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .main {
-    padding: 2rem;
+  height: 100vh;
+  background-color: black;
+}
+
+.navbar-custom {
+  background-color: black;
+  border-bottom: 1px solid $primary-dark;
+  .navbar-brand {
+    color: $primary-dark;
+    font-size: 2em;
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+  .custom-toggler-icon {
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    background-color: $primary;
+    position: relative;
+    transition: all 0.3s;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 25px;
+      height: 2px;
+      background-color: $primary;
+      transition: all 0.3s;
+    }
+
+    &:before {
+      top: -8px;
+    }
+
+    &:after {
+      top: 8px;
+    }
+  }
+
+  .navbar-nav .nav-link {
+    color: pink;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary-dark;
+    }
+  }
+  .navbar-nav .nav-link.active {
+    color: $primary-dark !important;
+  }
+}
+
+.home {
+  padding-top: 45vh;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: $primary-dark !important;
 }
