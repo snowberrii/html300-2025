@@ -6,11 +6,12 @@ html {
 *:after,
 *:before {
   box-sizing: inherit;
+  font-family: $font-family;
 }
 
 .main {
-  height: 100vh;
   background-color: black;
+  min-height: 100vh;
 }
 
 .navbar-custom {
@@ -64,12 +65,82 @@ html {
   }
 }
 
+/* ----  HOME PAGE  ---- */
 .home {
-  padding-top: 45vh;
+  padding-top: 25vh;
 }
 
 h1,
 h2 {
-  text-align: center;
   color: $primary-dark !important;
+}
+
+/* ---- ABOUT PAGE ---- */
+.about {
+  padding-top: 20vh;
+}
+
+h3 {
+  color: $primary-dark !important;
+}
+
+.about-me {
+  color: rgba($primary, 0.7);
+}
+
+.carousel-caption {
+  display: inline-block; /* makes the background only as wide as the content */
+  background: rgba(0, 0, 0, 0.4); /* dark, semi-transparent */
+  backdrop-filter: blur(3px); /* blur effect */
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 13px;
+  bottom: 5px;
+  p {
+    margin: 0;
+  }
+}
+
+.responsive-img {
+  width: 70%; /* Default width for small screens */
+}
+
+@media (min-width: 992px) {
+  .responsive-img {
+    width: 40%;
+  }
+  .carousel-control-prev {
+    left: 15%; /* Move it closer from the left edge */
+  }
+
+  .carousel-control-next {
+    right: 15%; /* Move it closer from the right edge */
+  }
+}
+
+/*---- PROJECT PAGE ---- */
+.project {
+  padding-top: 20vh;
+}
+
+.custom-accordion .accordian-item {
+  background-color: $primary;
+  border-bottom: 2px solid $primary-dark;
+  .accordian-header .accordian-button {
+    background-color: $primary;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+  .accordion-collapse.show {
+    margin: 0.5rem 0;
+  }
+}
+
+/*---- CONTACT PAGE ---- */
+.contact {
+   padding-top: 20vh;
 }
