@@ -1,24 +1,18 @@
 <script setup>
 import { ref } from "vue";
 
-const text = ref("Hello Coders!!");
+const ingredients = ref(["meat", "cheese", "veggies"]);
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-    <h1>{{ text }}</h1>
-  </header>
+  <main>
+    <ul>
+      <li v-for="ingredient in ingredients" :key="ingredient">
+        {{ ingredient }}
+      </li>
+    </ul>
+   
+  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-</style>
+<style scoped></style>

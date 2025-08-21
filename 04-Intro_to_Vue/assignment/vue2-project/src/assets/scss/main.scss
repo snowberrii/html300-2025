@@ -1,0 +1,28 @@
+// Import Bootstrap SCSS
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "tooltip";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  font-family: $font-family;
+}
+
+.main {
+  background-color: black;
+  min-height: 100vh;
+}
+
+#tooltipBtn {
+  background-color: pink;
+  font-weight: bold;
+  color: black;
+}
+
+
