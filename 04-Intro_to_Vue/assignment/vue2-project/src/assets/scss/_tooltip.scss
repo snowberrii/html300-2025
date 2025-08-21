@@ -1,0 +1,22 @@
+/* Global Tooltip Styles */
+.tooltip .tooltip-inner {
+  background-color: $primary-dark !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+}
+
+/* Tooltip Arrow */
+.tooltip.bs-tooltip-right .arrow::before {
+  border-right-color: $primary-dark !important;
+}
+.tooltip.bs-tooltip-left .arrow::before {
+  border-left-color: $primary-dark !important;
+}
+.tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: $primary-dark !important;
+}
+.tooltip.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: $primary-dark !important;
+}
