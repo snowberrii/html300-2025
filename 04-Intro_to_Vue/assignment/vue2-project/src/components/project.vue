@@ -3,7 +3,7 @@
     <nav-bar></nav-bar>
     <main id="main" class="main project">
       <div class="container ps-5 pe-5 pb-5">
-        <h3 class="h3 fw-bold mb-4">{{ title }}</h3>
+        <h3 class="h3 mb-4">{{ title }}</h3>
 
         <div class="horizontal-accordion">
           <div
@@ -21,6 +21,11 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="d-flex flex-column justify-content-center align-items-center text">
+        <h4>{{ text }}</h4>
+        <input v-model="text" @input="changeText" placeholder="type here ..." />
       </div>
     </main>
   </div>
@@ -41,6 +46,7 @@ export default {
         { name: "Project #3", details: "Details of project 3", open: false },
         { name: "Project #4", details: "Details of project 4", open: false },
       ],
+      text: "",
     };
   },
   methods: {
@@ -50,12 +56,20 @@ export default {
         open: i === index ? !p.open : false,
       }));
     },
+
+    changeText(event) {
+      this.text = event.targer.value;
+    },
   },
 };
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/main.scss";
+
+.text {
+  color: pink;
+}
 
 .project {
   padding-top: 20vh;
